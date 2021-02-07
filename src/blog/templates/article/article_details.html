@@ -1,0 +1,8 @@
+{% extends "base.html" %}
+
+{% block content %}
+Inside Blog App
+<h1>{{ object.title }}</h1>
+<p>{% if object.desc != None %}{{ object.desc}}{% else %}description Coming soon{% endif %}</p>
+{{ object.date }}
+{% endblock %}

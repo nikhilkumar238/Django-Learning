@@ -1,0 +1,25 @@
+{% extends 'base.html' %}
+
+{% block content %}
+<h1>Hello</h1>
+{{request.user}}
+{{request.user.is_authenticated}}
+<h2>Home Page</h2>
+
+{{ test1|capfirst }}
+{{ test2|upper }}
+{{ list }}
+
+{% for values in list %}
+    {% if values == 122 %}
+        <ul>{{ forloop.counter }} : {{ values|add:22 }}</ul>
+    {% elif values == 2 %}
+    <ul>{{ forloop.counter }} : {{ values|add:2222 }}</ul>
+    {% else %}
+        <ul>{{ forloop.counter }} : {{ values }}</ul>
+    {% endif %}
+{% endfor %}
+
+
+
+{% endblock %}
